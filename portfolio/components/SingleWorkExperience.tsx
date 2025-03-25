@@ -1,7 +1,7 @@
 import React from 'react';
 import ExperienceSkill from './ExperienceSkill';
 
-export interface SingleExperienceProps {
+export interface SingleWorkExperienceProps {
   startDate: string;
   endDate: string;
   company: string;
@@ -10,7 +10,7 @@ export interface SingleExperienceProps {
   skills: string[];
 }
 
-const SingleExperience: React.FC<SingleExperienceProps> = ({
+const SingleExperience: React.FC<SingleWorkExperienceProps> = ({
   startDate,
   endDate,
   company,
@@ -19,7 +19,7 @@ const SingleExperience: React.FC<SingleExperienceProps> = ({
   skills,
 }) => {
   return (
-    <div className="flex border-amber-300 border-4 max-w-max p-4 gap-4">
+    <div className="flex">
       <div>
         <h1 className="text-white">
           {startDate} - {endDate}
