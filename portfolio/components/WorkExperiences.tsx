@@ -9,7 +9,7 @@ export interface WorkExperiencesProps {
 
 const WorkExperiences: React.FC<WorkExperiencesProps> = ({ experiences }) => {
   return (
-    <div className="flex flex-col border-amber-300 border-4 p-4 gap-7  max-w-max">
+    <div className="flex flex-col border-amber-300 border-4 gap-7 p-4 max-w-max">
       {experiences.map((exp, index) => (
         <SingleWorkExperience
           key={index}
@@ -17,7 +17,7 @@ const WorkExperiences: React.FC<WorkExperiencesProps> = ({ experiences }) => {
           endDate={exp.endDate}
           company={exp.company}
           position={exp.position}
-          bullets={exp.bullets}
+          desc={exp.desc}
           skills={exp.skills}
         />
       ))}

@@ -6,7 +6,7 @@ export interface SingleWorkExperienceProps {
   endDate: string;
   company: string;
   position: string;
-  bullets: string[];
+  desc: string;
   skills: string[];
 }
 
@@ -15,26 +15,22 @@ const SingleExperience: React.FC<SingleWorkExperienceProps> = ({
   endDate,
   company,
   position,
-  bullets,
+  desc,
   skills,
 }) => {
   return (
-    <div className="flex">
-      <div>
-        <h1 className="text-white">
+    <div className="flex gap-6">
+      <div className=" text-white min-w-40">
+        <h1>
           {startDate} - {endDate}
         </h1>
       </div>
-      <div>
+      <div className="flex flex-col gap-5 max-w-4xl">
         <h1 className="text-white">
           {position} - {company}
         </h1>
-        <ul className="text-white">
-          {bullets.map((bullet, index) => (
-            <li key={index}>{bullet}</li>
-          ))}
-        </ul>
-        <div className="flex">
+        <h1 className="text-white">{desc}</h1>
+        <div className="flex gap-1">
           {skills.map((skill, index) => (
             <ExperienceSkill key={index} skill={skill} />
           ))}
