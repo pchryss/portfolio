@@ -1,6 +1,6 @@
 import { SingleWorkExperienceProps } from '@/components/SingleWorkExperience';
 
-const workExperiencesData: SingleWorkExperienceProps[] = [
+const AllWorkExperiencesData: SingleWorkExperienceProps[] = [
   {
     startDate: 'Aug 2024',
     endDate: 'Present',
@@ -19,4 +19,4 @@ const workExperiencesData: SingleWorkExperienceProps[] = [
   },
 ];
 
-export default workExperiencesData;
+export default AllWorkExperiencesData;
