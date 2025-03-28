@@ -1,12 +1,14 @@
 import WorkExperiences from '@/components/WorkExperiences';
-import Header from '@/components/Header';
+import Navbar from '@/components/Navbar';
 import workExperiencesData from '@/data/workExperienceData';
 
 export default function Page() {
   return (
-    <div className="">
-      <Header />
-      <WorkExperiences experiences={workExperiencesData} />
+    <div>
+      <Navbar />
+      <div className="">
+        <WorkExperiences experiences={workExperiencesData} />
+      </div>
     </div>
   );
 }
