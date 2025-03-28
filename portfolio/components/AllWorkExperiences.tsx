@@ -1,13 +1,15 @@
 import React from 'react';
 import SingleWorkExperience, {
   SingleWorkExperienceProps,
-} from '../components/SingleWorkExperience';
+} from './SingleWorkExperience';
 
 export interface WorkExperiencesProps {
   experiences: SingleWorkExperienceProps[];
 }
 
-const WorkExperiences: React.FC<WorkExperiencesProps> = ({ experiences }) => {
+const AllWorkExperiences: React.FC<WorkExperiencesProps> = ({
+  experiences,
+}) => {
   return (
     <div className="flex flex-col gap-7 p-4 max-w-max">
       {experiences.map((exp, index) => (
@@ -25,4 +27,4 @@ const WorkExperiences: React.FC<WorkExperiencesProps> = ({ experiences }) => {
   );
 };
 
-export default WorkExperiences;
+export default AllWorkExperiences;

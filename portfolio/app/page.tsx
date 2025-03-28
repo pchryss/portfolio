@@ -1,13 +1,16 @@
-import WorkExperiences from '@/components/WorkExperiences';
+import AllProjects from '@/components/AllProjects';
+import AllWorkExperiences from '@/components/AllWorkExperiences';
 import Navbar from '@/components/Navbar';
-import workExperiencesData from '@/data/workExperienceData';
+import AllWorkExperiencesData from '@/data/workExperienceData';
+import AllProjectsData from '@/data/projectData';
 
 export default function Page() {
   return (
     <div>
       <Navbar />
       <div className="">
-        <WorkExperiences experiences={workExperiencesData} />
+        <AllWorkExperiences experiences={AllWorkExperiencesData} />
+        <AllProjects projects={AllProjectsData} />
       </div>
     </div>
   );
