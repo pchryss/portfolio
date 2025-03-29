@@ -45,9 +45,9 @@ const NasaAPOD = () => {
   }, []);
 
   return (
-    <div className="h-100 flex justify-center items-center">
+    <div className="h-120 flex flex-col items-center  text-white">
       <div
-        className="relative h-100 w-100 bg-black flex justify-center items-center text-white"
+        className="relative h-100 w-100 bg-black flex justify-center items-center"
         onClick={() => toggleImage()}
       >
         {!viewImage || !data ? (
@@ -56,7 +56,14 @@ const NasaAPOD = () => {
           <Image src={data.src} alt="Random NASA image" fill={true} />
         )}
       </div>
-      {!viewImage || !data ? <h1></h1> : <h1>{data.title}</h1>}
+      {!viewImage || !data ? (
+        <h1> </h1>
+      ) : (
+        <>
+          <h1 className="text-xl">{data.title}</h1>
+          <h1 className="text-xs">Image via NASA APOD API</h1>
+        </>
+      )}
     </div>
   );
 };
