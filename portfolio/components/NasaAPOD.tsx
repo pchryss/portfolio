@@ -45,13 +45,13 @@ const NasaAPOD = () => {
   }, []);
 
   return (
-    <div className="h-120 flex flex-col items-center  text-white">
+    <div className="flex flex-col items-center  text-white">
       <div
-        className="relative h-100 w-100 bg-black flex justify-center items-center"
+        className="relative h-100 w-100 bg-black flex justify-center items-center border-white border-2 border-r-2"
         onClick={() => toggleImage()}
       >
         {!viewImage || !data ? (
-          <h1>Click for img!</h1>
+          <h1>Click for really cool space image</h1>
         ) : (
           <Image src={data.src} alt="Random NASA image" fill={true} />
         )}

@@ -1,10 +1,9 @@
 import React from 'react';
-import Image from 'next/image';
 import NasaAPOD from './NasaAPOD';
 
 const Header = () => {
   return (
-    <div className="flex p-4 ">
+    <div className="flex p-4 gap-5 flex-wrap">
       <div>
         <div className="flex flex-col gap-2 max-w-2xl text-white">
           <h1 className="text-4xl">Hello, I'm Philip!</h1>

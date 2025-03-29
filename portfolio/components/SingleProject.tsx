@@ -6,7 +6,7 @@ export interface SingleProjectProps {
   name: string;
   img: string;
   url: string;
-  desc: string;
+  bullets: string[];
   skills: string[];
 }
 
@@ -14,20 +14,29 @@ const SingleProject: React.FC<SingleProjectProps> = ({
   name,
   img,
   url,
-  desc,
+  bullets,
   skills,
 }) => {
   return (
-    <div className="flex gap-6">
-      <div className=" text-white min-w-40">
-        <h1>{name}</h1>
-      </div>
-      <div className="flex flex-col gap-5 max-w-4xl">
-        <h1 className="text-white">{desc}</h1>
-        <div className="flex gap-1">
-          {skills.map((skill, index) => (
-            <ExperienceSkill key={index} skill={skill} />
-          ))}
+    <div className="flex flex-col items-center justify-center">
+      <h1>{name}</h1>
+      <div className="flex ">
+        <div className="relative h-40 w-40">
+          <Image src={img} alt="image of project" fill={true} />
+        </div>
+        <div className="flex flex-col gap-1">
+          <div>
+            <ul>
+              {bullets.map((bullet, index) => (
+                <li key={index}>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex">
+            {skills.map((skill, index) => (
+              <ExperienceSkill key={index} skill={skill} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
