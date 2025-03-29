@@ -5,30 +5,58 @@ import Image from 'next/image';
 
 const api_key = process.env.NEXT_PUBLIC_API_KEY;
 
+interface ImageProps {
+  src: string;
+  title: string;
+  desc: string;
+}
+
 const NasaAPOD = () => {
-  const [src, setSrc] = useState<string | null>(null);
+  const [viewImage, setViewImage] = useState<boolean>(false);
+
+  const [data, setData] = useState<ImageProps | null>(null);
+
+  function toggleImage() {
+    setViewImage(true);
+  }
 
   useEffect(() => {
     async function getData() {
+      const year = Math.floor(Math.random() * 29) + 1995;
+      const month = Math.floor(Math.random() * 11) + 1;
+      const day = Math.floor(Math.random() * 27) + 1;
+
+      const DATE = `${year}-${month}-${day}`;
+
       const result = await callAPI(
-        'https://api.nasa.gov/planetary/apod?api_key=' +
-          process.env.NEXT_PUBLIC_API_KEY
+        `https://api.nasa.gov/planetary/apod?&api_key=${process.env.NEXT_PUBLIC_API_KEY}&date=${DATE}`
       );
-      setSrc(result.url);
+
+      const newImage: ImageProps = {
+        src: result.hdurl,
+        title: result.title,
+        desc: result.explanation,
+      };
+
+      setData(newImage);
     }
 
     getData();
   }, []);
 
-  console.log(src);
-
   return (
-    <div className="h-40 bg-amber-100">
-      {src ? (
-        <Image src={src} alt="Random NASA image" height={50} width={50} />
-      ) : (
-        <h1>bruh</h1>
-      )}
+    <div className="h-100 flex justify-center items-center">
+      <div
+        className="relative h-100 w-100 bg-black flex justify-center items-center text-white"
+        onClick={() => toggleImage()}
+      >
+        {!viewImage || !data ? (
+          <h1>Click for img!</h1>
+        ) : (
+          <Image src={data.src} alt="Random NASA image" fill={true} />
+        )}
+      </div>
+      {!viewImage || !data ? <h1></h1> : <h1>{data.title}</h1>}
     </div>
   );
 };
