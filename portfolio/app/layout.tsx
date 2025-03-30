@@ -12,7 +12,7 @@ export default function DashboardLayout({
 }) {
   return (
     <html lang="en" className={noto_sans.className}>
-      <body className="bg-slate-800">
+      <body className="bg-zinc-900">
         <main>{children}</main>
       </body>
     </html>

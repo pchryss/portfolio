@@ -24,7 +24,7 @@ const AllProjectsData: SingleProjectProps[] = [
       'Employed Flask and SQLite to implement a scalable and robust backend that ensures optimal application performance',
       'Created a seamless UI using HTML, CSS, and Bootstrap that enhanced user experience and accessibility',
     ],
-    skills: ['Python', 'Flask', 'Amazon Web Services', 'SQL'],
+    skills: ['Python', 'Flask', 'AWS', 'SQL'],
   },
 ];
 

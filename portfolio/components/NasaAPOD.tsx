@@ -33,7 +33,7 @@ const NasaAPOD = () => {
       );
 
       const newImage: ImageProps = {
-        src: result.hdurl,
+        src: result.url,
         title: result.title,
         desc: result.explanation,
       };
@@ -45,15 +45,20 @@ const NasaAPOD = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center  text-white">
+    <div className="flex flex-col items-center text-white h-120">
       <div
-        className="relative h-100 w-100 bg-black flex justify-center items-center border-white border-2 border-r-2"
+        className="relative h-100 w-100 bg-black flex justify-center items-center  border-white border-2 rounded-2xl"
         onClick={() => toggleImage()}
       >
         {!viewImage || !data ? (
           <h1>Click for really cool space image</h1>
         ) : (
-          <Image src={data.src} alt="Random NASA image" fill={true} />
+          <Image
+            src={data.src}
+            alt="Random NASA image"
+            fill={true}
+            className="rounded-2xl"
+          />
         )}
       </div>
       {!viewImage || !data ? (
