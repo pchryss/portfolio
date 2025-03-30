@@ -45,7 +45,7 @@ const NasaAPOD = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center text-white h-120">
+    <div className="flex flex-col items-center text-white h-100">
       <div
         className="relative h-100 w-100 bg-black flex justify-center items-center  border-white border-2 rounded-2xl"
         onClick={() => toggleImage()}

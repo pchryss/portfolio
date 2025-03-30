@@ -20,7 +20,7 @@ const SingleWorkExperience: React.FC<SingleWorkExperienceProps> = ({
 }) => {
   return (
     <div className="flex gap-6">
-      <div className=" text-white min-w-40">
+      <div className="flex text-white min-w-40 justify-center">
         <h1>
           {startDate} - {endDate}
         </h1>
