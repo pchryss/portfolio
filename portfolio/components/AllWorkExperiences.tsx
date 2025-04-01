@@ -11,7 +11,7 @@ const AllWorkExperiences: React.FC<WorkExperiencesProps> = ({
   experiences,
 }) => {
   return (
-    <div className="flex flex-col gap-7 p-4 max-w-max">
+    <div id="work" className="flex flex-col gap-7 p-4 max-w-max">
       <h1 className=" text-white text-4xl">Work Experience</h1>
       {experiences.map((exp, index) => (
         <SingleWorkExperience

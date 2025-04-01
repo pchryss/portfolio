@@ -3,7 +3,7 @@ import NasaAPOD from './NasaAPOD';
 
 const Header = () => {
   return (
-    <div className="flex p-4 gap-5 flex-wrap items-center">
+    <div id="info" className="flex p-4 gap-5 flex-wrap items-center">
       <div>
         <div className="flex flex-col gap-2 max-w-xl text-white">
           <h1 className="text-4xl">Hello, I'm Philip!</h1>
