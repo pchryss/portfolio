@@ -7,7 +7,7 @@ export interface AllProjectsProps {
 
 const AllProjects: React.FC<AllProjectsProps> = ({ projects }) => {
   return (
-    <div className="flex flex-col gap-7 p-4 max-w-max">
+    <div id="projects" className="flex flex-col gap-7 p-4 max-w-max">
       {projects.map((proj, index) => (
         <SingleProject
           key={index}
