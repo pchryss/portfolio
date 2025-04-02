@@ -11,8 +11,8 @@ const Header = () => {
           <h2>
             I'm currently studying computer science at the Georgia Institute of
             Technology. Additionally, I'm working as a backend dev with the
-            Yellow Jacket Space Program and an active member of the Georgia Tech
-            Astronomy Club!
+            Yellow Jacket Space Program and am an active member of the Georgia
+            Tech Astronomy Club!
           </h2>
           <div className="flex gap-3">
             <a href="https://github.com/pchryss" target="_blank">
